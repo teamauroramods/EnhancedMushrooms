@@ -1,16 +1,16 @@
 modLoader = "javafml"
 loaderVersion = "[39,)"
-issueTrackerURL = "https://github.com/MoonflowerTeam/${repo}/issues"
+issueTrackerURL = "https://github.com/TeamAuroraMods/${repo}/issues"
 license = "GPLv3"
 
 [[mods]]
 modId = "${id}"
 version = "${version}"
 displayName = "${name}"
-authors = "Moonflower"
+authors = "Team Aurora"
 credits = "An author, another author, and the last author."
 description = '''
-This is an example starter template.
+Adds wood types for huge mushrooms.
 '''
 #updateJSONURL = ""
 #logoFile = ""

@@ -3,13 +3,13 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "This is an example starter template.",
-  "authors": [ "Moonflower" ],
+  "description": "Adds wood types for huge mushrooms.",
+  "authors": [ "Team Aurora" ],
   "contributors": [ "An author", "Another author", "The last author" ],
   "contact": {
-    "homepage": "https://moonflower.gg",
-	"issues": "https://github.com/MoonflowerTeam/${repo}/issues",
-    "sources": "https://github.com/MoonflowerTeam/${repo}/"
+    "homepage": "https://discord.gg/teamaurora",
+	"issues": "https://github.com/TeamAuroraMods/${repo}/issues",
+    "sources": "https://github.com/TeamAuroraMods/${repo}/"
   },
   "license": "GPLv3",
   "environment": "*",
@@ -19,7 +19,7 @@
   ],
   "entrypoints": {
     "main": [
-      "gg.moonflower.starter.core.fabric.StarterFabric"
+      "com.teamaurora.enhanced_mushrooms.core.fabric.EnhancedMushroomsFabric"
     ]
   },
   "depends": {
