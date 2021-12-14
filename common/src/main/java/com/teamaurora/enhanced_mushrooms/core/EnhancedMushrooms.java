@@ -1,5 +1,7 @@
 package com.teamaurora.enhanced_mushrooms.core;
 
+import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
+import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
 import gg.moonflower.pollen.api.platform.Platform;
 
 public class EnhancedMushrooms {
@@ -18,6 +20,8 @@ public class EnhancedMushrooms {
     }
 
     public static void onCommonInit() {
+        EMBlocks.BLOCKS.register(EnhancedMushrooms.PLATFORM);
+        EMItems.ITEMS.register(EnhancedMushrooms.PLATFORM);
     }
 
     public static void onCommonPostInit(Platform.ModSetupContext ctx) {

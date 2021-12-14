@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.teamaurora.enhanced_mushrooms.core.fabric.EnhancedMushroomsFabric"
+    ],
+    "client": [
+      "com.teamaurora.enhanced_mushrooms.client.fabric.EMClient"
     ]
   },
   "depends": {

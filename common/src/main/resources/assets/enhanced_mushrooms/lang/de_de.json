@@ -1,0 +1,97 @@
+{
+  "_comment": "Red Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Roter Pilzstiel",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Geschälter roter Pilzstiel",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Rote Pilzhyphen",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Geschälte rote Pilzhyphen",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Rote Pilzbretter",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Rote Pilzstufe",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Rote Pilztreppe",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Rote Pilzdruckplatte",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Roter Pilzzaun",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Rotes Pilzzauntor",
+  "block.enhanced_mushrooms.red_mushroom_button": "Roter Pilzknopf",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Rote Pilzfalltür",
+  "block.enhanced_mushrooms.red_mushroom_door": "Rote Pilztür",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Rotes Pilzschild",
+  "block.minecraft.red_mushroom_block": "Rote Pilzkappe",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Rotes Pilzboot",
+
+  "_comment2": "Brown Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Brauner Pilzstiel",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Geschälter brauner Pilzstiel",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Braune Pilzhyphen",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Geschälte braune Pilzhyphen",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Braune Pilzbretter",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Braune Pilzstufe",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Braune Pilztreppe",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Braune Pilzdruckplatte",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Brauner Pilzzaun",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Braunes Pilzzauntor",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Brauner Pilzknopf",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Braune Pilzfalltür",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Braune Pilztür",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Braunes Pilzschild",
+  "block.minecraft.brown_mushroom_block": "Braune Pilzkappe",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Braunes Pilzboot",
+
+  "_comment5": "Glowshroom Blocks & Items",
+  "block.enhanced_mushrooms.glowshroom_stem": "Glühpilzstiel",
+  "block.enhanced_mushrooms.stripped_glowshroom_stem": "Geschälter Glühpilzstiel",
+  "block.enhanced_mushrooms.glowshroom_hyphae": "Glühpilzhyphen",
+  "block.enhanced_mushrooms.stripped_glowshroom_hyphae": "Geschälte Glühpilzhyphen",
+  "block.enhanced_mushrooms.glowshroom_planks": "Glühpilzbretter",
+  "block.enhanced_mushrooms.glowshroom_slab": "Glühpilzstufe",
+  "block.enhanced_mushrooms.glowshroom_stairs": "Glühpilztreppe",
+  "block.enhanced_mushrooms.glowshroom_pressure_plate": "Glühpilzdruckplatte",
+  "block.enhanced_mushrooms.glowshroom_fence": "Glühpilzzaun",
+  "block.enhanced_mushrooms.glowshroom_fence_gate": "Glühpilzzauntor",
+  "block.enhanced_mushrooms.glowshroom_button": "Glühpilzknopf",
+  "block.enhanced_mushrooms.glowshroom_trapdoor": "Glühpilzfalltür",
+  "block.enhanced_mushrooms.glowshroom_door": "Glühpilztür",
+  "block.enhanced_mushrooms.glowshroom_sign": "Glühpilzschild",
+
+  "item.enhanced_mushrooms.glowshroom_boat": "Glühpilzboot",
+
+  "_comment6": "Quark Compat",
+  "block.enhanced_mushrooms.vertical_red_mushroom_planks": "Vertikale rote Pilzbretter",
+  "block.enhanced_mushrooms.vertical_brown_mushroom_planks": "Vertikale braune Pilzbretter",
+  "block.enhanced_mushrooms.vertical_glowshroom_planks": "Vertikale Glühpilzbretter",
+
+  "block.enhanced_mushrooms.red_mushroom_vertical_slab": "Vertikale rote Pilzstufe",
+  "block.enhanced_mushrooms.brown_mushroom_vertical_slab": "Vertikale braune Pilzstufe",
+  "block.enhanced_mushrooms.glowshroom_vertical_slab": "Vertikale Glühpilzstufe",
+
+  "block.enhanced_mushrooms.red_mushroom_bookshelf": "Rotes Pilzbücherregal",
+  "block.enhanced_mushrooms.brown_mushroom_bookshelf": "Braunes Pilzbücherregal",
+  "block.enhanced_mushrooms.glowshroom_bookshelf": "Glühpilzbücherregal",
+
+  "block.enhanced_mushrooms.red_mushroom_ladder": "Rote Pilzleiter",
+  "block.enhanced_mushrooms.brown_mushroom_ladder": "Braune Pilzleiter",
+  "block.enhanced_mushrooms.glowshroom_ladder": "Glühpilzleiter",
+  
+  "block.enhanced_mushrooms.red_mushroom_post": "Roter Pilzpfahl",
+  "block.enhanced_mushrooms.brown_mushroom_post": "Brauner Pilzpfahl",
+  "block.enhanced_mushrooms.glowshroom_post": "Glühpilzpfahl",
+
+  "block.enhanced_mushrooms.stripped_red_mushroom_post": "Geschälter roter Pilzpfahl",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_post": "Geschälter brauner Pilzpfahl",
+  "block.enhanced_mushrooms.stripped_glowshroom_post": "Geschälter Glühpilzpfahl",
+  
+  "block.enhanced_mushrooms.brown_mushroom_chest": "Braune Pilztruhe",
+  "block.enhanced_mushrooms.glowshroom_chest": "Glühpilztruhe",
+  
+  "block.enhanced_mushrooms.brown_mushroom_trapped_chest": "Braune Redstone-Pilztruhe",
+  "block.enhanced_mushrooms.glowshroom_trapped_chest": "Redstone-Glühpilztruhe",
+
+  "_comment7": "Buzzier Bees Compat",
+  "block.enhanced_mushrooms.red_mushroom_beehive": "Roter Pilzbienenstock",
+  "block.enhanced_mushrooms.brown_mushroom_beehive": "Brauner Pilzbienenstock",
+  "block.enhanced_mushrooms.glowshroom_beehive": "Glühpilzbienenstock",
+
+  "_comment8": "Misc",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Gebratene Pilze",
+  "item.enhanced_mushrooms.beef_stew": "Rinderragout"
+}
