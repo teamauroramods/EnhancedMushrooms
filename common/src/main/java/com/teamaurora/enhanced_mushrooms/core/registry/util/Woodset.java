@@ -27,9 +27,7 @@ public class Woodset {
     }
 
     private RotatedPillarBlock template_log(MaterialColor arg, MaterialColor arg2) {
-        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (arg3) -> {
-            return arg3.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? arg : arg2;
-        }).strength(2.0F).sound(SoundType.WOOD));
+        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (arg3) -> arg3.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? arg : arg2).strength(2.0F).sound(SoundType.WOOD));
     }
 
     private RotatedPillarBlock template_wood(MaterialColor arg) {
