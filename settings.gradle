@@ -8,7 +8,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "starter"
+rootProject.name = "enhanced_mushrooms"
 
 include("common")
 include("fabric")
