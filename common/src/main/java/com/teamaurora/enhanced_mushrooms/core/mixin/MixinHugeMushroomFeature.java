@@ -17,7 +17,7 @@ import java.util.Random;
 @Mixin(AbstractHugeMushroomFeature.class)
 public class MixinHugeMushroomFeature {
     @Redirect(method = "placeTrunk", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;getState(Ljava/util/Random;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;"))
-    public BlockState getGoodState(BlockStateProvider self, Random rand, BlockPos pos) {
+    public BlockState placeEnhancedMushroom(BlockStateProvider self, Random rand, BlockPos pos) {
         if (this.getClass().isAssignableFrom(HugeRedMushroomFeature.class)) {
             return EMBlocks.RED_MUSHROOM_STEM.get().defaultBlockState();
         }

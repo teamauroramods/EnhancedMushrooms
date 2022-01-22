@@ -1,6 +1,5 @@
 package com.teamaurora.enhanced_mushrooms.core.registry.util;
 
-import com.teamaurora.enhanced_mushrooms.common.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -13,15 +12,7 @@ import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Supplier;
 
-public class Woodset {
-    private final MaterialColor logColor;
-    private final MaterialColor woodColor;
-
-    public Woodset(MaterialColor logColor, MaterialColor woodColor) {
-        this.logColor = logColor;
-        this.woodColor = woodColor;
-    }
-
+public record Woodset(MaterialColor logColor, MaterialColor woodColor) {
     private static Boolean never(BlockState arg, BlockGetter arg2, BlockPos arg3, EntityType<?> arg4) {
         return false;
     }
@@ -59,15 +50,15 @@ public class Woodset {
     }
 
     public StairBlock stairs(Supplier<Block> planks) {
-        return new AuroraStairBlock(planks.get().defaultBlockState(), BlockBehaviour.Properties.copy(planks.get()));
+        return new StairBlock(planks.get().defaultBlockState(), BlockBehaviour.Properties.copy(planks.get()));
     }
 
     public PressurePlateBlock pressurePlate() {
-        return new AuroraPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD, woodColor).noCollission().strength(0.5F).sound(SoundType.WOOD));
+        return new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD, woodColor).noCollission().strength(0.5F).sound(SoundType.WOOD));
     }
 
     public ButtonBlock button() {
-        return new AuroraWoodButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().strength(0.5F).sound(SoundType.WOOD));
+        return new WoodButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().strength(0.5F).sound(SoundType.WOOD));
     }
 
     public FenceBlock fence() {
@@ -79,10 +70,10 @@ public class Woodset {
     }
 
     public DoorBlock door() {
-        return new AuroraDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, woodColor).strength(3.0F).sound(SoundType.WOOD).noOcclusion());
+        return new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD, woodColor).strength(3.0F).sound(SoundType.WOOD).noOcclusion());
     }
 
     public TrapDoorBlock trapdoor() {
-        return new AuroraTrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, woodColor).strength(3.0F).sound(SoundType.WOOD).noOcclusion().isValidSpawn(Woodset::never));
+        return new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, woodColor).strength(3.0F).sound(SoundType.WOOD).noOcclusion().isValidSpawn(Woodset::never));
     }
 }

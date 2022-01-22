@@ -3,7 +3,6 @@ package com.teamaurora.enhanced_mushrooms.client.fabric;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 
 public class EMClient implements ClientModInitializer {

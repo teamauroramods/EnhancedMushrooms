@@ -12,11 +12,14 @@ architectury {
     fabric()
 }
 
+//def generatedResources = file("src/generated/resources")
+def accessWidenerFile = project(":common").file("src/main/resources/${rootProject.mod_id}.accesswidener")
+
 loom {
     mixin {
         defaultRefmapName = "${project.mod_id}-refmap.json"
     }
-//    accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
+    accessWidenerPath.set(accessWidenerFile)
 }
 
 configurations {
@@ -43,7 +46,13 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
 
+//task copyAccessWidener(type: Copy) {
+//    from(accessWidenerFile)
+//    into(generatedResources)
+//}
+
 processResources {
+//    dependsOn(copyAccessWidener)
     inputs.property "id", rootProject.mod_id
     inputs.property "name", rootProject.mod_name
     inputs.property "version", rootProject.mod_version
