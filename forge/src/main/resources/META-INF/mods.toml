@@ -8,12 +8,12 @@ modId = "${id}"
 version = "${version}"
 displayName = "${name}"
 authors = "Team Aurora"
-credits = "An author, another author, and the last author."
+credits = "StevePlayzz_, JustoPlayzz_, ex0planetary, mcvinnyq"
 description = '''
 Adds wood types for huge mushrooms.
 '''
 #updateJSONURL = ""
-#logoFile = ""
+logoFile="logo.png"
 
 [[dependencies.${id}]]
 modId = "forge"

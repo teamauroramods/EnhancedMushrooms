@@ -5,13 +5,14 @@
   "name": "${name}",
   "description": "Adds wood types for huge mushrooms.",
   "authors": [ "Team Aurora" ],
-  "contributors": [ "An author", "Another author", "The last author" ],
+  "contributors": [ "StevePlayzz_", "JustoPlayzz_", "ex0planetary", "mcvinnyq" ],
   "contact": {
     "homepage": "https://discord.gg/teamaurora",
 	"issues": "https://github.com/TeamAuroraMods/${repo}/issues",
     "sources": "https://github.com/TeamAuroraMods/${repo}/"
   },
   "license": "GPLv3",
+  "icon": "icon.png",
   "environment": "*",
   "mixins": [
     "${id}-common.mixins.json",
