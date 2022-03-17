@@ -10,6 +10,9 @@ import gg.moonflower.pollen.api.util.PollinatedModContainer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 
+/**
+ * @author Steven, Exoplanetary
+ */
 public class EnhancedMushrooms {
     public static final String MOD_ID = "enhanced_mushrooms";
     public static final Platform PLATFORM = Platform.builder(MOD_ID)

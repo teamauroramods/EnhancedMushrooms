@@ -12,6 +12,9 @@ import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Supplier;
 
+/**
+ * @author Exoplanetary
+ */
 public record Woodset(MaterialColor logColor, MaterialColor woodColor) {
     private static Boolean never(BlockState arg, BlockGetter arg2, BlockPos arg3, EntityType<?> arg4) {
         return false;

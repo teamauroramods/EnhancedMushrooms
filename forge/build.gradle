@@ -8,14 +8,13 @@ plugins {
 archivesBaseName = "${rootProject.archivesBaseName}-${project.name}"
 
 loom {
-    accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
-
     forge {
         mixinConfig "${project.mod_id}-common.mixins.json"
         mixinConfig "${project.mod_id}.mixins.json"
 
-        convertAccessWideners.set(true)
-        extraAccessWideners.add("${project.mod_id}.accesswidener")
+        dataGen {
+            mod project.mod_id
+        }
     }
     mixin {
         defaultRefmapName = "${project.mod_id}-refmap.json"
@@ -35,16 +34,16 @@ configurations {
     developmentForge.extendsFrom common
 }
 
-
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
 
     modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}") { transitive = false }
-	
-	modRuntimeOnly "curse.maven:configured-457570:3559398"
+
+    modRuntimeOnly "curse.maven:configured-457570:3559398"
     modRuntimeOnly "curse.maven:catalogue-459701:3559402"
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    implementation(project(path: ":common", configuration: "namedElements")) { transitive false }
+    developmentForge(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
 
@@ -70,7 +69,6 @@ processResources {
 
 shadowJar {
     exclude "fabric.mod.json"
-    exclude "archiectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
     classifier "dev-shadow"

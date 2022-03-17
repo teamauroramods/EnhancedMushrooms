@@ -13,6 +13,9 @@ import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Supplier;
 
+/**
+ * @author Steven, Exoplanetary
+ */
 @SuppressWarnings("unused")
 public class EMBlocks {
     public static final PollinatedRegistry<Block> BLOCKS = PollinatedRegistry.create(Registry.BLOCK, EnhancedMushrooms.MOD_ID);

@@ -12,14 +12,10 @@ architectury {
     fabric()
 }
 
-//def generatedResources = file("src/generated/resources")
-def accessWidenerFile = project(":common").file("src/main/resources/${rootProject.mod_id}.accesswidener")
-
 loom {
     mixin {
         defaultRefmapName = "${project.mod_id}-refmap.json"
     }
-    accessWidenerPath.set(accessWidenerFile)
 }
 
 configurations {
@@ -42,17 +38,12 @@ dependencies {
 
     modRuntimeOnly "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    implementation(project(path: ":common", configuration: "namedElements")) { transitive false }
+    developmentFabric(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
 
-//task copyAccessWidener(type: Copy) {
-//    from(accessWidenerFile)
-//    into(generatedResources)
-//}
-
 processResources {
-//    dependsOn(copyAccessWidener)
     inputs.property "id", rootProject.mod_id
     inputs.property "name", rootProject.mod_name
     inputs.property "version", rootProject.mod_version
@@ -73,8 +64,6 @@ processResources {
 }
 
 shadowJar {
-    exclude "archiectury.common.json"
-
     configurations = [project.configurations.shadowCommon]
     classifier "dev-shadow"
 }

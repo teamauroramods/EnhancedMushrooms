@@ -14,6 +14,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 import java.util.Random;
 
+/**
+ * @author Steven, Exoplanetary
+ */
 @Mixin(AbstractHugeMushroomFeature.class)
 public class MixinHugeMushroomFeature {
     @Redirect(method = "placeTrunk", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;getState(Ljava/util/Random;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;"))
