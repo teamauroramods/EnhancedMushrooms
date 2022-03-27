@@ -23,21 +23,25 @@ public class EnhancedMushrooms {
             .build();
 
     public static void onClientInit() {
-        RenderTypeRegistry.register(EMBlocks.BROWN_MUSHROOM_DOOR.get(), RenderType.cutoutMipped());
-        RenderTypeRegistry.register(EMBlocks.BROWN_MUSHROOM_TRAPDOOR.get(), RenderType.cutoutMipped());
-
         PollinatedModContainer.get(MOD_ID).ifPresent(modContainer -> ResourceRegistry.registerBuiltinResourcePack(new ResourceLocation(EnhancedMushrooms.MOD_ID, "vanilla_overrides"), modContainer, false));
     }
 
-    public static void onClientPostInit(Platform.ModSetupContext ctx) {}
+    public static void onClientPostInit(Platform.ModSetupContext ctx) {
+        ctx.enqueueWork(() -> {
+            RenderTypeRegistry.register(EMBlocks.BROWN_MUSHROOM_DOOR.get(), RenderType.cutoutMipped());
+            RenderTypeRegistry.register(EMBlocks.BROWN_MUSHROOM_TRAPDOOR.get(), RenderType.cutoutMipped());
+        });
+    }
 
     public static void onCommonInit() {
         EMBlocks.BLOCKS.register(EnhancedMushrooms.PLATFORM);
         EMItems.ITEMS.register(EnhancedMushrooms.PLATFORM);
-
-        StrippingRegistry.register(EMBlocks.RED_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_RED_MUSHROOM_STEM.get());
-        StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_STEM.get());
     }
 
-    public static void onCommonPostInit(Platform.ModSetupContext ctx) {}
+    public static void onCommonPostInit(Platform.ModSetupContext ctx) {
+        ctx.enqueueWork(() -> {
+            StrippingRegistry.register(EMBlocks.RED_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_RED_MUSHROOM_STEM.get());
+            StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_STEM.get());
+        });
+    }
 }

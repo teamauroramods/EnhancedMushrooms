@@ -8,7 +8,7 @@ modId = "${id}"
 version = "${version}"
 displayName = "${name}"
 authors = "Team Aurora"
-credits = "StevePlayzz_, JustoPlayzz_, ex0planetary, mcvinnyq"
+credits = "StevePlayzz_, JustoPlayzz_, ex0planetary, mcvinnyq, ebo2022"
 description = '''
 Adds wood types for huge mushrooms.
 '''

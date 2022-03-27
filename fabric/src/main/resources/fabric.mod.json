@@ -5,7 +5,7 @@
   "name": "${name}",
   "description": "Adds wood types for huge mushrooms.",
   "authors": [ "Team Aurora" ],
-  "contributors": [ "StevePlayzz_", "JustoPlayzz_", "ex0planetary", "mcvinnyq" ],
+  "contributors": [ "StevePlayzz_", "JustoPlayzz_", "ex0planetary", "mcvinnyq", "ebo2022" ],
   "contact": {
     "homepage": "https://discord.gg/teamaurora",
 	"issues": "https://github.com/TeamAuroraMods/${repo}/issues",
@@ -14,6 +14,7 @@
   "license": "GPLv3",
   "icon": "icon.png",
   "environment": "*",
+  "accessWidener" : "${id}.accesswidener",
   "mixins": [
     "${id}-common.mixins.json",
     "${id}.mixins.json"
@@ -21,14 +22,11 @@
   "entrypoints": {
     "main": [
       "com.teamaurora.enhanced_mushrooms.core.fabric.EnhancedMushroomsFabric"
-    ],
-    "client": [
-      "com.teamaurora.enhanced_mushrooms.client.fabric.EMClient"
     ]
   },
   "depends": {
     "fabric": "*",
     "minecraft": "1.18.x",
-    "pollen": "1.0.0"
+    "pollen": ">= 1.3.1 < 2.0.0"
   }
 }
