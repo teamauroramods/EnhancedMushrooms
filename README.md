@@ -1,7 +1,5 @@
 <p align="center"><img src="https://raw.githubusercontent.com/teamauroramods/EnhancedMushrooms/1.18.x/forge/src/main/resources/logo.png" width=60%></p>
 <h3 align="center">Enhanced Mushrooms</h3>
-
-<p align="center">Enhanced Mushroom replaces Vanilla's overworld mushroom stems with 2 new woodsets for consistency with the new fungi 1.16 added. Also included is a built-in resource pack, featuring alternative textures for nether and overworld mushrooms (Credits to Exoplanetary & 8hp).</p>
 <p align="center">
   1.18 and above requires Pollen
 </p>
