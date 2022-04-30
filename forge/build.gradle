@@ -11,6 +11,7 @@ loom {
     accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
 
     forge {
+        // For some reason gradle doesn't like using rootProject here?
         mixinConfig "${project.mod_id}-common.mixins.json"
         mixinConfig "${project.mod_id}.mixins.json"
 
@@ -23,6 +24,11 @@ loom {
     }
     mixin {
         defaultRefmapName = "${project.mod_id}-refmap.json"
+    }
+    launches {
+        data {
+            arg "--existing", file("src/main/resources").absolutePath
+        }
     }
 }
 
@@ -51,8 +57,7 @@ dependencies {
     modRuntimeOnly "curse.maven:configured-457570:3559398"
     modRuntimeOnly "curse.maven:catalogue-459701:3559402"
 
-    implementation(project(path: ":common", configuration: "namedElements")) { transitive false }
-    developmentForge(project(path: ":common", configuration: "namedElements")) { transitive false }
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
 
@@ -78,6 +83,7 @@ processResources {
 
 shadowJar {
     exclude "fabric.mod.json"
+    exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
     classifier "dev-shadow"

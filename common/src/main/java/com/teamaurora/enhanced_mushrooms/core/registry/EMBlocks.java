@@ -3,6 +3,7 @@ package com.teamaurora.enhanced_mushrooms.core.registry;
 import com.teamaurora.enhanced_mushrooms.common.item.FollowItemLike;
 import com.teamaurora.enhanced_mushrooms.core.EnhancedMushrooms;
 import com.teamaurora.enhanced_mushrooms.core.registry.util.Woodset;
+import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,7 +19,7 @@ import java.util.function.Supplier;
  */
 @SuppressWarnings("unused")
 public class EMBlocks {
-    public static final PollinatedRegistry<Block> BLOCKS = PollinatedRegistry.create(Registry.BLOCK, EnhancedMushrooms.MOD_ID);
+    public static final PollinatedBlockRegistry BLOCKS = PollinatedRegistry.createBlock(EMItems.ITEMS);
 
     /* Red Mushroom Wood Set */
     private static final Woodset RED_MUSHROOM = new Woodset(MaterialColor.WOOL, MaterialColor.SAND);

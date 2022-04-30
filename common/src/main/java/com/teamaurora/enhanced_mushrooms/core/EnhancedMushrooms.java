@@ -30,6 +30,8 @@ public class EnhancedMushrooms {
         ctx.enqueueWork(() -> {
             RenderTypeRegistry.register(EMBlocks.BROWN_MUSHROOM_DOOR.get(), RenderType.cutoutMipped());
             RenderTypeRegistry.register(EMBlocks.BROWN_MUSHROOM_TRAPDOOR.get(), RenderType.cutoutMipped());
+            RenderTypeRegistry.register(EMBlocks.RED_MUSHROOM_DOOR.get(), RenderType.cutoutMipped());
+            RenderTypeRegistry.register(EMBlocks.RED_MUSHROOM_TRAPDOOR.get(), RenderType.cutoutMipped());
         });
     }
 
@@ -42,6 +44,8 @@ public class EnhancedMushrooms {
         ctx.enqueueWork(() -> {
             StrippingRegistry.register(EMBlocks.RED_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_RED_MUSHROOM_STEM.get());
             StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_STEM.get());
+            StrippingRegistry.register(EMBlocks.RED_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_RED_MUSHROOM_HYPHAE.get());
+            StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_HYPHAE.get());
         });
     }
 }

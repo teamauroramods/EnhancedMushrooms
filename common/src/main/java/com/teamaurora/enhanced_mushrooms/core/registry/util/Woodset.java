@@ -21,11 +21,11 @@ public record Woodset(MaterialColor logColor, MaterialColor woodColor) {
     }
 
     private RotatedPillarBlock template_log(MaterialColor arg, MaterialColor arg2) {
-        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (arg3) -> arg3.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? arg : arg2).strength(2.0F).sound(SoundType.WOOD));
+        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (arg3) -> arg3.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? arg : arg2).strength(2.0F).sound(SoundType.STEM));
     }
 
     private RotatedPillarBlock template_wood(MaterialColor arg) {
-        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, arg).strength(2.0F).sound(SoundType.WOOD));
+        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, arg).strength(2.0F).sound(SoundType.STEM));
     }
 
     public RotatedPillarBlock log() {
