@@ -1,5 +1,6 @@
 package com.teamaurora.enhanced_mushrooms.core;
 
+import com.teamaurora.enhanced_mushrooms.core.registry.EMBlockEntityTypes;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
 import gg.moonflower.pollen.api.platform.Platform;
@@ -8,6 +9,7 @@ import gg.moonflower.pollen.api.registry.client.RenderTypeRegistry;
 import gg.moonflower.pollen.api.registry.resource.ResourceRegistry;
 import gg.moonflower.pollen.api.util.PollinatedModContainer;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 
 /**
@@ -37,6 +39,7 @@ public class EnhancedMushrooms {
 
     public static void onCommonInit() {
         EMBlocks.BLOCKS.register(EnhancedMushrooms.PLATFORM);
+        EMBlockEntityTypes.TILES.register(EnhancedMushrooms.PLATFORM);
         EMItems.ITEMS.register(EnhancedMushrooms.PLATFORM);
     }
 
@@ -47,5 +50,9 @@ public class EnhancedMushrooms {
             StrippingRegistry.register(EMBlocks.RED_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_RED_MUSHROOM_HYPHAE.get());
             StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_HYPHAE.get());
         });
+    }
+
+    public static TranslatableComponent generateTranslation(String key, Object... args) {
+        return new TranslatableComponent(MOD_ID + "." + key, args);
     }
 }

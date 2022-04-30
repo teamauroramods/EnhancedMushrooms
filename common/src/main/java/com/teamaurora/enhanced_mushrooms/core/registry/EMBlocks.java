@@ -3,6 +3,7 @@ package com.teamaurora.enhanced_mushrooms.core.registry;
 import com.teamaurora.enhanced_mushrooms.common.item.FollowItemLike;
 import com.teamaurora.enhanced_mushrooms.core.EnhancedMushrooms;
 import com.teamaurora.enhanced_mushrooms.core.registry.util.Woodset;
+import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
 import net.minecraft.core.Registry;
@@ -38,6 +39,8 @@ public class EMBlocks {
     public static final Supplier<Block> RED_MUSHROOM_FENCE_GATE = registerBlock("red_mushroom_fence_gate", RED_MUSHROOM::fenceGate, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_FENCE_GATE);
     public static final Supplier<Block> RED_MUSHROOM_DOOR = registerBlock("red_mushroom_door", RED_MUSHROOM::door, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_DOOR);
     public static final Supplier<Block> RED_MUSHROOM_TRAPDOOR = registerBlock("red_mushroom_trapdoor", RED_MUSHROOM::trapdoor, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_TRAPDOOR);
+    public static final Supplier<Block> RED_MUSHROOM_CABINET = BLOCKS.registerWithItem("red_mushroom_cabinet", RED_MUSHROOM::cabinet, new Item.Properties().tab(Platform.isModLoaded("farmersdelight") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null));
+
 
     /* Brown Mushroom Wood Set */
     private static final Woodset BROWN_MUSHROOM = new Woodset(MaterialColor.COLOR_ORANGE, MaterialColor.DIRT);
@@ -56,6 +59,7 @@ public class EMBlocks {
     public static final Supplier<Block> BROWN_MUSHROOM_FENCE_GATE = registerBlock("brown_mushroom_fence_gate", BROWN_MUSHROOM::fenceGate, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_FENCE_GATE);
     public static final Supplier<Block> BROWN_MUSHROOM_DOOR = registerBlock("brown_mushroom_door", BROWN_MUSHROOM::door, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_DOOR);
     public static final Supplier<Block> BROWN_MUSHROOM_TRAPDOOR = registerBlock("brown_mushroom_trapdoor", BROWN_MUSHROOM::trapdoor, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_TRAPDOOR);
+    public static final Supplier<Block> BROWN_MUSHROOM_CABINET = BLOCKS.registerWithItem("brown_mushroom_cabinet", RED_MUSHROOM::cabinet, new Item.Properties().tab(Platform.isModLoaded("farmersdelight") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null));
 
     private static Supplier<Block> registerBlock(String id, Supplier<Block> block, CreativeModeTab tab, Block followBlock) {
         Supplier<Block> register = BLOCKS.register(id, block);

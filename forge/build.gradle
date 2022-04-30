@@ -52,6 +52,8 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
 
+    modImplementation("curse.maven:farmers-delight-398521:3615366")
+
     modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}") { transitive = false }
 
     modRuntimeOnly "curse.maven:configured-457570:3559398"

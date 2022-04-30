@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "key": {
+    "_": {
+      "item": "enhanced_mushrooms:brown_mushroom_slab"
+    },
+    "D": {
+      "item": "enhanced_mushrooms:brown_mushroom_trapdoor"
+    }
+  },
+  "result": {
+    "item": "enhanced_mushrooms:brown_mushroom_cabinet"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}

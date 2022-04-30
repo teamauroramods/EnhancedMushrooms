@@ -1,5 +1,6 @@
 package com.teamaurora.enhanced_mushrooms.core.registry.util;
 
+import com.teamaurora.enhanced_mushrooms.common.block.EMCabinetBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -78,5 +79,9 @@ public record Woodset(MaterialColor logColor, MaterialColor woodColor) {
 
     public TrapDoorBlock trapdoor() {
         return new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, woodColor).strength(3.0F).sound(SoundType.WOOD).noOcclusion().isValidSpawn(Woodset::never));
+    }
+
+    public EMCabinetBlock cabinet() {
+        return new EMCabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL));
     }
 }
