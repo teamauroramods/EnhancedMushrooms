@@ -38,9 +38,9 @@ public class EnhancedMushrooms {
     }
 
     public static void onCommonInit() {
-        EMBlocks.BLOCKS.register(EnhancedMushrooms.PLATFORM);
-        EMBlockEntityTypes.TILES.register(EnhancedMushrooms.PLATFORM);
-        EMItems.ITEMS.register(EnhancedMushrooms.PLATFORM);
+        EMBlocks.BLOCKS.register(PLATFORM);
+        EMBlockEntityTypes.TILES.register(PLATFORM);
+        EMItems.ITEMS.register(PLATFORM);
     }
 
     public static void onCommonPostInit(Platform.ModSetupContext ctx) {
