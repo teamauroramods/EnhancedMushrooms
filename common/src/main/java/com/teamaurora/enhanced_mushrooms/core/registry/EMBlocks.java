@@ -1,16 +1,18 @@
 package com.teamaurora.enhanced_mushrooms.core.registry;
 
+import com.mojang.datafixers.util.Pair;
 import com.teamaurora.enhanced_mushrooms.common.item.FollowItemLike;
-import com.teamaurora.enhanced_mushrooms.core.EnhancedMushrooms;
 import com.teamaurora.enhanced_mushrooms.core.registry.util.Woodset;
+import gg.moonflower.pollen.api.block.PollinatedStandingSignBlock;
+import gg.moonflower.pollen.api.block.PollinatedWallSignBlock;
 import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
-import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Supplier;
@@ -41,6 +43,7 @@ public class EMBlocks {
     public static final Supplier<Block> RED_MUSHROOM_TRAPDOOR = registerBlock("red_mushroom_trapdoor", RED_MUSHROOM::trapdoor, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_TRAPDOOR);
     public static final Supplier<Block> RED_MUSHROOM_CABINET = BLOCKS.registerWithItem("red_mushroom_cabinet", RED_MUSHROOM::cabinet, new Item.Properties().tab(Platform.isModLoaded("farmersdelight") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null));
 
+    public static final Pair<Supplier<PollinatedStandingSignBlock>, Supplier<PollinatedWallSignBlock>> RED_MUSHROOM_SIGN = BLOCKS.registerSign("red_mushroom", Material.WOOD, MaterialColor.SAND);
 
     /* Brown Mushroom Wood Set */
     private static final Woodset BROWN_MUSHROOM = new Woodset(MaterialColor.COLOR_ORANGE, MaterialColor.DIRT);
@@ -60,6 +63,8 @@ public class EMBlocks {
     public static final Supplier<Block> BROWN_MUSHROOM_DOOR = registerBlock("brown_mushroom_door", BROWN_MUSHROOM::door, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_DOOR);
     public static final Supplier<Block> BROWN_MUSHROOM_TRAPDOOR = registerBlock("brown_mushroom_trapdoor", BROWN_MUSHROOM::trapdoor, CreativeModeTab.TAB_REDSTONE, Blocks.WARPED_TRAPDOOR);
     public static final Supplier<Block> BROWN_MUSHROOM_CABINET = BLOCKS.registerWithItem("brown_mushroom_cabinet", RED_MUSHROOM::cabinet, new Item.Properties().tab(Platform.isModLoaded("farmersdelight") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null));
+
+    public static final Pair<Supplier<PollinatedStandingSignBlock>, Supplier<PollinatedWallSignBlock>> BROWN_MUSHROOM_SIGN = BLOCKS.registerSign("brown_mushroom", Material.WOOD, MaterialColor.DIRT);
 
     private static Supplier<Block> registerBlock(String id, Supplier<Block> block, CreativeModeTab tab, Block followBlock) {
         Supplier<Block> register = BLOCKS.register(id, block);

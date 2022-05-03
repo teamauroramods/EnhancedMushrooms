@@ -2,6 +2,7 @@ package com.teamaurora.enhanced_mushrooms.core;
 
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlockEntityTypes;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
+import com.teamaurora.enhanced_mushrooms.core.registry.EMEntities;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
 import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.StrippingRegistry;
@@ -39,6 +40,7 @@ public class EnhancedMushrooms {
 
     public static void onCommonInit() {
         EMBlocks.BLOCKS.register(PLATFORM);
+        EMEntities.BOATS.register(PLATFORM);
         EMBlockEntityTypes.TILES.register(PLATFORM);
         EMItems.ITEMS.register(PLATFORM);
     }
