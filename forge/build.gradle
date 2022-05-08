@@ -7,6 +7,11 @@ plugins {
 
 archivesBaseName = "${rootProject.archivesBaseName}-${project.name}"
 
+architectury {
+    platformSetupLoomIde()
+    forge()
+}
+
 loom {
     accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
 
@@ -25,20 +30,6 @@ loom {
     mixin {
         defaultRefmapName = "${project.mod_id}-refmap.json"
     }
-    launches {
-        data {
-            arg "--existing", file("src/main/resources").absolutePath
-        }
-    }
-}
-
-sourceSets.main.resources {
-    srcDir file("src/generated/resources")
-}
-
-architectury {
-    platformSetupLoomIde()
-    forge()
 }
 
 configurations {
@@ -49,15 +40,14 @@ configurations {
     developmentForge.extendsFrom common
 }
 
+
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
 
-    modImplementation("curse.maven:farmers-delight-398521:${rootProject.fd_forge_version}")
-
     modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}") { transitive = false }
 
-    modRuntimeOnly "curse.maven:configured-457570:3559398"
-    modRuntimeOnly "curse.maven:catalogue-459701:3559402"
+//	modRuntimeOnly "curse.maven:configured-457570:3533860"
+//  modRuntimeOnly "curse.maven:catalogue-459701:3529457"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
@@ -85,7 +75,7 @@ processResources {
 
 shadowJar {
     exclude "fabric.mod.json"
-    exclude "architectury.common.json"
+    exclude "archiectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
     classifier "dev-shadow"

@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[39,)"
+loaderVersion = "[40,)"
 issueTrackerURL = "https://github.com/TeamAuroraMods/${repo}/issues"
 license = "GPLv3"
 
@@ -18,7 +18,7 @@ logoFile="logo.png"
 [[dependencies.${id}]]
 modId = "forge"
 mandatory = true
-versionRange = "[39,)"
+versionRange = "[40,)"
 ordering = "NONE"
 side = "BOTH"
 
@@ -32,7 +32,7 @@ side = "BOTH"
 [[dependencies.${id}]]
 modId = "pollen"
 mandatory = true
-versionRange = "[1.0.0,)"
+versionRange = "[1.4.1,)"
 ordering = "BEFORE"
 side = "BOTH"
 
