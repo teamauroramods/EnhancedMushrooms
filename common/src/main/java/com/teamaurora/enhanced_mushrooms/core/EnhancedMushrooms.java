@@ -1,5 +1,6 @@
 package com.teamaurora.enhanced_mushrooms.core;
 
+import com.teamaurora.enhanced_mushrooms.core.other.EMData;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlockEntityTypes;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMEntities;
@@ -7,6 +8,7 @@ import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
 import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.StrippingRegistry;
 import gg.moonflower.pollen.api.registry.client.RenderTypeRegistry;
+import gg.moonflower.pollen.api.registry.content.FlammabilityRegistry;
 import gg.moonflower.pollen.api.registry.resource.ResourceRegistry;
 import gg.moonflower.pollen.api.util.PollinatedModContainer;
 import net.minecraft.client.renderer.RenderType;
@@ -47,10 +49,8 @@ public class EnhancedMushrooms {
 
     public static void onCommonPostInit(Platform.ModSetupContext ctx) {
         ctx.enqueueWork(() -> {
-            StrippingRegistry.register(EMBlocks.RED_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_RED_MUSHROOM_STEM.get());
-            StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_STEM.get());
-            StrippingRegistry.register(EMBlocks.RED_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_RED_MUSHROOM_HYPHAE.get());
-            StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_HYPHAE.get());
+            EMData.registerFlammables();
+            EMData.registerStrippables();
         });
     }
 
