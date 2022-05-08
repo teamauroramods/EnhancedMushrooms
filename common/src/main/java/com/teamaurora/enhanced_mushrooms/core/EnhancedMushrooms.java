@@ -1,7 +1,6 @@
 package com.teamaurora.enhanced_mushrooms.core;
 
 import com.teamaurora.enhanced_mushrooms.core.other.EMData;
-import com.teamaurora.enhanced_mushrooms.core.registry.EMBlockEntityTypes;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMEntities;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
@@ -40,8 +39,8 @@ public class EnhancedMushrooms {
 
     public static void onCommonInit() {
         EMBlocks.BLOCKS.register(PLATFORM);
+        EMBlocks.BLOCK_ENTITIES.register(PLATFORM);
         EMEntities.BOATS.register(PLATFORM);
-        EMBlockEntityTypes.TILES.register(PLATFORM);
         EMItems.ITEMS.register(PLATFORM);
     }
 

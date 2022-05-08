@@ -1,30 +1,37 @@
 package com.teamaurora.enhanced_mushrooms.core.registry;
 
 import com.mojang.datafixers.util.Pair;
+import com.teamaurora.enhanced_mushrooms.common.blockentity.EMCabinetBlockEntity;
 import com.teamaurora.enhanced_mushrooms.common.item.TabInsertBlockItem;
+import com.teamaurora.enhanced_mushrooms.core.EnhancedMushrooms;
 import com.teamaurora.enhanced_mushrooms.core.registry.util.Woodset;
 import gg.moonflower.pollen.api.block.PollinatedStandingSignBlock;
 import gg.moonflower.pollen.api.block.PollinatedWallSignBlock;
 import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
+import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Supplier;
 
 /**
- * @author Steven, Exoplanetary
+ * @author Steven
+ * @author Exoplanetary
+ * @author ebo2022
  */
 @SuppressWarnings("unused")
 public class EMBlocks {
     public static final PollinatedBlockRegistry BLOCKS = PollinatedRegistry.createBlock(EMItems.ITEMS);
+    public static final PollinatedRegistry<BlockEntityType<?>> BLOCK_ENTITIES = PollinatedRegistry.create(Registry.BLOCK_ENTITY_TYPE, EnhancedMushrooms.MOD_ID);
 
-    /* Red Mushroom Wood Set */
+    // Red Mushroom Woodset
     private static final Woodset RED_MUSHROOM = new Woodset(MaterialColor.WOOL, MaterialColor.SAND);
 
     public static final Supplier<Block> STRIPPED_RED_MUSHROOM_STEM = BLOCKS.registerWithItem("stripped_red_mushroom_stem", RED_MUSHROOM::stripped_log, block -> new TabInsertBlockItem(Blocks.STRIPPED_WARPED_STEM.asItem(), block, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
@@ -45,7 +52,7 @@ public class EMBlocks {
 
     public static final Pair<Supplier<PollinatedStandingSignBlock>, Supplier<PollinatedWallSignBlock>> RED_MUSHROOM_SIGN = BLOCKS.registerSign("red_mushroom", Material.WOOD, MaterialColor.SAND);
 
-    /* Brown Mushroom Wood Set */
+    // Brown Mushroom Woodset
     private static final Woodset BROWN_MUSHROOM = new Woodset(MaterialColor.COLOR_ORANGE, MaterialColor.DIRT);
 
     public static final Supplier<Block> STRIPPED_BROWN_MUSHROOM_STEM = BLOCKS.registerWithItem("stripped_brown_mushroom_stem", BROWN_MUSHROOM::stripped_log, block -> new TabInsertBlockItem(Blocks.STRIPPED_WARPED_STEM.asItem(), block, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
@@ -66,10 +73,7 @@ public class EMBlocks {
 
     public static final Pair<Supplier<PollinatedStandingSignBlock>, Supplier<PollinatedWallSignBlock>> BROWN_MUSHROOM_SIGN = BLOCKS.registerSign("brown_mushroom", Material.WOOD, MaterialColor.DIRT);
 
-    // TODO Use item factories once Pollen adds their implementation of TabInsertBlockItem
-    private static Supplier<Block> registerTabInsertBlock(String id, Supplier<Block> block, Item.Properties properties, Block insertAfter) {
-        Supplier<Block> register = BLOCKS.register(id, block);
-        EMItems.ITEMS.register(id, () -> new TabInsertBlockItem(insertAfter.asItem(), register.get(), properties));
-        return register;
-    }
+    // Cabinet Block Entity
+
+    public static final Supplier<BlockEntityType<EMCabinetBlockEntity>> CABINET_BE = BLOCK_ENTITIES.register("cabinet", () -> BlockEntityType.Builder.of(EMCabinetBlockEntity::new, EMBlocks.BROWN_MUSHROOM_CABINET.get(), EMBlocks.RED_MUSHROOM_CABINET.get()).build(null));
 }

@@ -1,7 +1,7 @@
 package com.teamaurora.enhanced_mushrooms.common.block;
 
-import com.teamaurora.enhanced_mushrooms.common.block.entity.EMCabinetBlockEntity;
-import com.teamaurora.enhanced_mushrooms.core.registry.EMBlockEntityTypes;
+import com.teamaurora.enhanced_mushrooms.common.blockentity.EMCabinetBlockEntity;
+import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -27,6 +27,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
+/**
+ * @author Vectorwing (original code from Farmer's Delight)
+ */
 @SuppressWarnings("deprecation")
 public class EMCabinetBlock extends BaseEntityBlock
 {
@@ -103,7 +106,7 @@ public class EMCabinetBlock extends BaseEntityBlock
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return EMBlockEntityTypes.CABINET.get().create(pos, state);
+        return EMBlocks.CABINET_BE.get().create(pos, state);
     }
 
     @Override

@@ -8,6 +8,9 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Supplier;
 
+/**
+ * @author Steven
+ */
 public class EMEntities {
     public static final PollinatedRegistry<PollinatedBoatType> BOATS = PollinatedRegistry.create(PollenRegistries.BOAT_TYPE_REGISTRY, EnhancedMushrooms.MOD_ID);
 

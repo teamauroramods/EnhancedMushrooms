@@ -4,6 +4,9 @@ import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import gg.moonflower.pollen.api.registry.StrippingRegistry;
 import gg.moonflower.pollen.api.registry.content.FlammabilityRegistry;
 
+/**
+ * @author ebo2022
+ */
 public class EMData {
     public static void registerFlammables() {
             // Red Mushrooms

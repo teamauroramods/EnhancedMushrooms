@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import java.util.function.Supplier;
 
 /**
+ * @author Steven
  * @author Exoplanetary
  */
 public class EMItems {

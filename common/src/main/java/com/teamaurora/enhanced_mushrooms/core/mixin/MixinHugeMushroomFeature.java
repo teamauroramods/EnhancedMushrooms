@@ -15,7 +15,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Random;
 
 /**
- * @author Steven, Exoplanetary
+ * @author Steven
+ * @author Exoplanetary
  */
 @Mixin(AbstractHugeMushroomFeature.class)
 public class MixinHugeMushroomFeature {

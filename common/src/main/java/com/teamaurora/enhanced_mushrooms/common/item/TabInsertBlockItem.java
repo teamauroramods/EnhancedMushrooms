@@ -10,6 +10,9 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.function.Predicate;
 
+/**
+ * @author Jackson (code temporarily from next/1.16.x branch of Pollen)
+ */
 // TODO Replace this with Pollen's implementation once it releases
 public class TabInsertBlockItem extends BlockItem {
     private final Predicate<ItemStack> filter;

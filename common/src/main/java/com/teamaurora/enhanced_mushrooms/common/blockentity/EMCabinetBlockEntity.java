@@ -1,8 +1,8 @@
-package com.teamaurora.enhanced_mushrooms.common.block.entity;
+package com.teamaurora.enhanced_mushrooms.common.blockentity;
 
 import com.teamaurora.enhanced_mushrooms.common.block.EMCabinetBlock;
 import com.teamaurora.enhanced_mushrooms.core.EnhancedMushrooms;
-import com.teamaurora.enhanced_mushrooms.core.registry.EMBlockEntityTypes;
+import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
@@ -23,6 +23,9 @@ import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
+/**
+ * @author Vectorwing (original code from Farmer's Delight)
+ */
 public class EMCabinetBlockEntity extends RandomizableContainerBlockEntity
 {
     private NonNullList<ItemStack> contents = NonNullList.withSize(27, ItemStack.EMPTY);
@@ -52,7 +55,7 @@ public class EMCabinetBlockEntity extends RandomizableContainerBlockEntity
     };
 
     public EMCabinetBlockEntity(BlockPos pos, BlockState state) {
-        super(EMBlockEntityTypes.CABINET.get(), pos, state);
+        super(EMBlocks.CABINET_BE.get(), pos, state);
     }
 
     @Override
