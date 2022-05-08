@@ -12,6 +12,7 @@ architectury {
     fabric()
 }
 
+def generatedResources = file("src/generated/resources")
 def accessWidenerFile = project(":common").file("src/main/resources/${rootProject.mod_id}.accesswidener")
 
 loom {
@@ -19,6 +20,10 @@ loom {
         defaultRefmapName = "${project.mod_id}-refmap.json"
     }
     accessWidenerPath.set(accessWidenerFile)
+}
+
+sourceSets.main.resources {
+    srcDir generatedResources
 }
 
 configurations {
