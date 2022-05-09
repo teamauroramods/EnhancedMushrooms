@@ -4,6 +4,8 @@ import com.teamaurora.enhanced_mushrooms.core.other.EMData;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMEntities;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
+import gg.moonflower.pollen.api.config.ConfigManager;
+import gg.moonflower.pollen.api.config.PollinatedConfigType;
 import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.client.RenderTypeRegistry;
 import gg.moonflower.pollen.api.registry.resource.ResourceRegistry;
@@ -17,6 +19,7 @@ import net.minecraft.resources.ResourceLocation;
  */
 public class EnhancedMushrooms {
     public static final String MOD_ID = "enhanced_mushrooms";
+    public static final EnhancedMushroomsConfig.Common CONFIG = ConfigManager.register(MOD_ID, PollinatedConfigType.COMMON, EnhancedMushroomsConfig.Common::new);
     public static final Platform PLATFORM = Platform.builder(MOD_ID)
             .clientInit(EnhancedMushrooms::onClientInit)
             .clientPostInit(EnhancedMushrooms::onClientPostInit)

@@ -50,6 +50,11 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
 
+task copyAccessWidener(type: Copy) {
+    from(accessWidenerFile)
+    into(generatedResources)
+}
+
 processResources {
     inputs.property "id", rootProject.mod_id
     inputs.property "name", rootProject.mod_name
