@@ -21,8 +21,8 @@ public class EnhancedMushrooms {
     public static final String MOD_ID = "enhanced_mushrooms";
     public static final EnhancedMushroomsConfig.Common CONFIG = ConfigManager.register(MOD_ID, PollinatedConfigType.COMMON, EnhancedMushroomsConfig.Common::new);
     public static final Platform PLATFORM = Platform.builder(MOD_ID)
-            .clientInit(EnhancedMushrooms::onClientInit)
-            .clientPostInit(EnhancedMushrooms::onClientPostInit)
+            .clientInit(() -> EnhancedMushrooms::onClientInit)
+            .clientPostInit(() -> EnhancedMushrooms::onClientPostInit)
             .commonInit(EnhancedMushrooms::onCommonInit)
             .commonPostInit(EnhancedMushrooms::onCommonPostInit)
             .build();
