@@ -19,7 +19,7 @@ public class MushroomInteractionManager {
     public static InteractionResult onRightClickBlock(Player player, Level level, InteractionHand hand, BlockHitResult hitResult) {
         BlockPos pos = hitResult.getBlockPos();
         BlockState state = level.getBlockState(pos);
-        if (state.getBlock() instanceof HugeMushroomBlock && EnhancedMushrooms.CONFIG.capsStrippable.get()) {
+        if (state.getBlock() instanceof HugeMushroomBlock) {
             BlockState strippedState = state.setValue(HugeMushroomBlock.DOWN, false)
                     .setValue(HugeMushroomBlock.UP, false)
                     .setValue(HugeMushroomBlock.NORTH, false)
@@ -34,7 +34,7 @@ public class MushroomInteractionManager {
                     level.setBlockAndUpdate(pos, strippedState);
                     level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
                     player.swing(hand);
-                    return InteractionResult.SUCCESS;
+                    return InteractionResult.sidedSuccess(level.isClientSide);
                 }
             }
         }
