@@ -17,6 +17,7 @@ import java.util.Random;
 /**
  * @author Steven
  * @author Exoplanetary
+ * @author Duplex
  */
 @Mixin(AbstractHugeMushroomFeature.class)
 public class MixinHugeMushroomFeature {
