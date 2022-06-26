@@ -1,0 +1,32 @@
+{
+  "parent": "enhanced_mushrooms:recipes/root",
+  "rewards": {
+    "recipes": [
+      "enhanced_mushrooms:crafting/red_mushroom/red_mushroom_sign"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "enhanced_mushrooms:crafting/red_mushroom/red_mushroom_sign"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "enhanced_mushrooms:red_mushroom_planks" ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

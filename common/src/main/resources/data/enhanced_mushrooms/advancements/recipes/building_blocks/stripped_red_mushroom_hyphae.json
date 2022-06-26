@@ -1,0 +1,32 @@
+{
+  "parent": "enhanced_mushrooms:recipes/root",
+  "rewards": {
+    "recipes": [
+      "enhanced_mushrooms:crafting/red_mushroom/stripped_red_mushroom_hyphae"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "enhanced_mushrooms:crafting/red_mushroom/stripped_red_mushroom_hyphae"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "enhanced_mushrooms:stripped_red_mushroom_stem" ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

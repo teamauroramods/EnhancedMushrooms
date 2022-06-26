@@ -1,0 +1,28 @@
+{
+  "parent": "enhanced_mushrooms:recipes/root",
+  "rewards": {
+    "recipes": [
+      "enhanced_mushrooms:crafting/red_mushroom/red_mushroom_boat"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "enhanced_mushrooms:crafting/red_mushroom/red_mushroom_boat"
+      }
+    },
+    "in_water": {
+      "conditions": {
+        "block": "minecraft:water"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "requirements": [
+    [
+      "in_water",
+      "has_the_recipe"
+    ]
+  ]
+}
