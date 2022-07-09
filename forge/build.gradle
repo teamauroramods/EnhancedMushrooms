@@ -46,11 +46,11 @@ dependencies {
 
     modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}") { transitive = false }
 
-//	modRuntimeOnly "curse.maven:configured-457570:3533860"
-//  modRuntimeOnly "curse.maven:catalogue-459701:3529457"
-
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+
+    implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+    annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
 }
 
 processResources {

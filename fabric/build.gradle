@@ -48,6 +48,9 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+
+    implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+    annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
 }
 
 task copyAccessWidener(type: Copy) {
