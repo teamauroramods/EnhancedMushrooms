@@ -27,6 +27,6 @@
   "depends": {
     "fabric": "*",
     "minecraft": "1.18.2",
-    "pollen": ">=1.4.1 <2.0.0"
+    "pollen": ">=1.4.4 <2.0.0"
   }
 }
