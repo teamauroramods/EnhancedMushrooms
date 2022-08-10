@@ -40,17 +40,32 @@ configurations {
     developmentForge.extendsFrom common
 }
 
+repositories {
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+}
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
 
-    modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}") { transitive = false }
+    modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}")
+
+    modRuntimeOnly "me.djtheredstoner:DevAuth-forge-latest:${rootProject.devauth_version}"
+    modRuntimeOnly "curse.maven:configured-457570:3640884"
+    modRuntimeOnly "curse.maven:catalogue-459701:3559402"
+
+    shadowCommon(implementation("javazoom:jlayer:1.0.1"))
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
-
-    implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
-    annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
 }
 
 processResources {
