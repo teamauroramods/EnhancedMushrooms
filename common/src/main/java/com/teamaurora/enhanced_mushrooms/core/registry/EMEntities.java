@@ -10,11 +10,12 @@ import java.util.function.Supplier;
 
 /**
  * @author Steven
+ * @author ebo2022
  */
 public class EMEntities {
     public static final PollinatedRegistry<PollinatedBoatType> BOATS = PollinatedRegistry.create(PollenRegistries.BOAT_TYPE_REGISTRY, EnhancedMushrooms.MOD_ID);
 
     /* Boats */
-    public static final Supplier<PollinatedBoatType> BROWN_MUSHROOM_BOAT = BOATS.register("brown_mushroom_boat", () -> new PollinatedBoatType(new ResourceLocation(EnhancedMushrooms.MOD_ID, "textures/entity/boat/brown_mushroom.png")));
-    public static final Supplier<PollinatedBoatType> RED_MUSHROOM_BOAT = BOATS.register("red_mushroom_boat", () -> new PollinatedBoatType(new ResourceLocation(EnhancedMushrooms.MOD_ID, "textures/entity/boat/red_mushroom.png")));
+    public static final Supplier<PollinatedBoatType> BROWN_MUSHROOM_BOAT = BOATS.register("brown_mushroom_boat", () -> new PollinatedBoatType(EnhancedMushrooms.location("textures/entity/boat/brown_mushroom.png")));
+    public static final Supplier<PollinatedBoatType> RED_MUSHROOM_BOAT = BOATS.register("red_mushroom_boat", () -> new PollinatedBoatType(EnhancedMushrooms.location("textures/entity/boat/red_mushroom.png")));
 }

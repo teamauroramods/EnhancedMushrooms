@@ -5,8 +5,6 @@ import com.teamaurora.enhanced_mushrooms.core.other.EMData;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMBlocks;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMEntities;
 import com.teamaurora.enhanced_mushrooms.core.registry.EMItems;
-import gg.moonflower.pollen.api.config.ConfigManager;
-import gg.moonflower.pollen.api.config.PollinatedConfigType;
 import gg.moonflower.pollen.api.event.events.entity.player.PlayerInteractionEvents;
 import gg.moonflower.pollen.api.platform.Platform;
 import gg.moonflower.pollen.api.registry.client.RenderTypeRegistry;
@@ -29,7 +27,7 @@ public class EnhancedMushrooms {
             .build();
 
     public static void onClientInit() {
-        PollinatedModContainer.get(MOD_ID).ifPresent(modContainer -> ResourceRegistry.registerBuiltinResourcePack(new ResourceLocation(EnhancedMushrooms.MOD_ID, "vanilla_overrides"), modContainer, false));
+        PollinatedModContainer.get(MOD_ID).ifPresent(modContainer -> ResourceRegistry.registerBuiltinResourcePack(location("vanilla_overrides"), modContainer, false));
     }
 
     public static void onClientPostInit(Platform.ModSetupContext ctx) {
@@ -46,15 +44,15 @@ public class EnhancedMushrooms {
         EMBlocks.BLOCK_ENTITIES.register(PLATFORM);
         EMEntities.BOATS.register(PLATFORM);
         EMItems.ITEMS.register(PLATFORM);
-
         PlayerInteractionEvents.RIGHT_CLICK_BLOCK.register(MushroomInteractionManager::onRightClickBlock);
     }
 
     public static void onCommonPostInit(Platform.ModSetupContext ctx) {
-        ctx.enqueueWork(() -> {
-            EMData.registerFlammables();
-            EMData.registerStrippables();
-        });
+        ctx.enqueueWork(EMData::init);
+    }
+
+    public static ResourceLocation location(String path) {
+        return new ResourceLocation(MOD_ID, path);
     }
 
     public static TranslatableComponent generateTranslation(String key, Object... args) {
